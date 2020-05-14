@@ -51,9 +51,9 @@ app.prepare()
         return handle(req, res)
     })
     
-    server.listen(8080, (err) => {
+    server.listen(port, (err) => {
         if (err) throw err
-        console.log('> Ready on http://localhost:8080')
+        console.log('> Ready on port: ' + port);
     })
 })
 .catch((ex) => {
