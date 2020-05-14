@@ -1,0 +1,152 @@
+.User {
+    position: relative;
+    text-align: left;
+    object-fit: contain;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.User:hover {
+    text-decoration: none;
+}
+.Container {
+    position: absolute;
+    overflow: hidden;
+    top: 2rem;
+    right: 0px;
+    z-index: 1004;
+    width: 250px;
+    height: 10.5rem;
+    transition: visibility 500ms;
+}
+.Link {
+    border: none;
+    background-color: inherit;
+    display: flex;
+    align-self: center;
+}
+.Link .Icon {
+    margin-left: 10px;
+}
+.UserArrow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: .9rem;
+    z-index: 1005;
+    /* background-color: #333333; */
+    background-color: #f8f9fa;
+}
+.UserArrow .ArrowUp {
+    transition: all 500ms ease-in-out;
+    opacity: 0;
+    width: 0; 
+    height: 0; 
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #f0f0f0;
+    float: right;
+    margin-right: 1px;
+    margin-top: 3px;
+}
+.UserArrow.Expanded .ArrowUp {
+    opacity: 1;
+}
+.MenuContainer {
+    position: relative;
+}
+.Menu {
+    transition: all 500ms ease-in-out;
+    position: absolute;
+    top: .9rem;
+    right: 0;
+    z-index: 1004;
+    width: 100%;
+    /* background-color: black;
+    color: white; */
+    background-color: #fff;
+    color: black;
+    z-index: 1004;
+    padding: 0;
+    border: 1px solid rgb(218, 218, 218);
+}
+.Menu.Collapsed {
+    top: -17rem;
+}
+.NotVisible {
+    visibility: hidden;
+}
+.CloseUserButton {
+    cursor: pointer;
+    float: right;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+.CloseUserButton:hover {
+    color: crimson;
+}
+.MenuTitle {
+    cursor: default;
+    height: 3rem;
+    line-height: 1.4rem;
+    margin: 0;
+    border: none;
+    /* background-color: #f0f0f0; */
+    background-color: #f7f7f7;
+    color: black;
+}
+.UserTitleLink {
+    margin-right: 20px;
+    vertical-align: sub;
+    font-size: 0.8rem;
+}
+.Menu .MenuLink p {
+    color: black;
+    cursor: pointer;
+    line-height: 3rem;
+    /* padding: 10px 5px 0; */
+    margin: 0px;
+    padding-left: 20px;
+}
+.Menu .MenuLink p:hover {
+    color: dodgerblue;
+    background-color: rgb(238, 247, 255);
+}
+.Menu .MenuLink a {
+    color: red;
+}
+.Menu .MenuLink .BorderTop {
+    border-top: 1px solid rgb(218, 218, 218);
+}
+.Menu .MenuLink .MenuAccount {
+    border: none;
+}
+/* .Menu .MenuLink:hover p{
+    color: dodgerblue
+} */
+.Menu .MenuLink p .Icon {
+    width: 25px;
+}
+.Menu .MenuLink a:hover {
+    text-decoration: none;
+}
+.UserButtonActive {
+    opacity: 0;
+    animation: user-button-active 500ms ease-in-out forwards;
+}
+@keyframes user-button-active {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .Container {
+        height: 0px;
+    }
+}

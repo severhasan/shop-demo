@@ -1,0 +1,25 @@
+.Header {
+    border-bottom: 1px solid grey;
+}
+.Title {
+    display: inline-block;
+}
+.Product {
+    border-bottom: 1px solid grey;
+    padding: 20px 0;
+}
+
+.Container img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.Checkout {
+    padding: 20px 0;
+}
+.Checkout h3 {
+    display: inline-block;
+}
+.Checkout button {
+    float: right;
+}

@@ -1,0 +1,73 @@
+.Container {
+    /* width: 100vw; */
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    height: calc(100vh - 186px);
+    background-color: rgb(95, 197, 237);
+    box-sizing: border-box;
+}
+.Container a, .Container a:hover {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 500ms ease-in-out;
+}
+.Container a:hover {
+    transform: scale(1.1);
+}
+
+.Slogan {
+    position: absolute;
+    top: 10rem;
+    color: white;
+    display: block;
+    text-align: center;
+    width: calc(100vw - 1px);
+    display: flex;
+    justify-content: center;
+}
+.Slogan p {
+    margin: 0 50px;
+    font-size: 2rem;
+}
+.Container img {
+    object-fit: cover;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 100vw;
+}
+
+.Fadein {
+    opacity: 0;
+    animation: fadein 500ms 500ms forwards;
+}
+.Fadein2 {
+    opacity: 0;
+    animation: fadein 500ms 1000ms forwards;
+}
+@keyframes fadein {
+    0% {opacity: 0; padding-top: 0}
+    100% {opacity: 1; padding-top: 1rem}
+}
+
+@media screen and (max-width: 960px) {
+    .Slogan {
+        /* position: relative; */
+        top: 0;
+        width: 100%;
+        display: block;
+        /* margin-top: 50px; */
+    }
+    .Slogan p {
+        display: block;
+        font-size: 1.8rem;
+    }
+    .Container {
+        position: relative;
+        display: block;
+    }
+    .Container img {
+        max-width: 100%;
+        height: 100%;
+    }
+}

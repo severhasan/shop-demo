@@ -1,0 +1,46 @@
+.Container {
+    position: fixed;
+    z-index: 99;
+    border: 1px solid gainsboro;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+.Section h6 {
+    border-bottom: 1px solid black;
+    margin-top: 10px;
+}
+.Section ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+.Section ul li {
+    line-height: 2rem;
+    cursor: pointer;
+    padding: 0 10px;
+}
+.Section ul li:hover {
+    background-color: rgb(255, 238, 220);
+}
+.Section ul li.Active {
+    /* background-color: gainsboro; */
+    background-color: rgb(255, 136, 0);
+    color: white;
+    list-style-type: disc;
+}
+
+@media screen and (max-width: 960px) {
+    .Container {
+        margin: 0 auto;
+        width: 80%;
+        flex-direction: row;
+        position: absolute;
+        top: -1.5rem !important;
+        font-size: .8rem;
+    }
+}

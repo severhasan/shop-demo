@@ -1,0 +1,12 @@
+.Container {
+    margin-top: 2rem;
+    min-height: calc(100vh - 186px);
+    /* border: 1px solid rgb(175, 175, 175); */
+    /* padding: 2rem 0; */
+}
+
+@media screen and (max-width: 960px) {
+    .Container {
+        /* min-height: 80vh; */
+    }
+}
